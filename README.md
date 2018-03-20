@@ -8,6 +8,7 @@
 3. DisTopV0.m: prior distribution
 4. Hist_curve.m: visualized depth Histogram profiles
 5. plotsub.m, plotsub0.m: visualized marginal distributions
+6. null_spac.m: null space analysis
 
 Others: supporting subfunctions
 
