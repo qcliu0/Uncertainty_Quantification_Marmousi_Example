@@ -8,3 +8,5 @@
 3. DisTopV0.m: prior distribution
 4. Hist_curve.m: visualized depth Histogram profiles
 5. plotsub.m, plotsub0.m: visualized marginal distributions
+
+Others: supporting subfunctions
