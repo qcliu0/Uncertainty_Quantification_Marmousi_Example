@@ -19,3 +19,7 @@ Actually, only one scalar $ nu/a $ is enough, which will occur in the official v
 The initModel folder contains the init models, used for prior samplings.
 
 The invertedModel folder contains the inverted models, used for posterior sampling.
+
+Note that the Misfit functions in SRVM_part1 were obtained 6 months ago.
+
+For the newest comparion of data misfit functions, please find data_misfit.png within this folder.
