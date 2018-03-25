@@ -1,5 +1,6 @@
 # Uncertainty_analysis_example-Marmousi-
 
+Workflow for SRVM based uncertainty estimation
 1. Run RSVD_SRVM.m to get the SVD of inverse Hessian
 2. Run sampling_Hess to extract elements from Hessian or inverse Hessian
 
