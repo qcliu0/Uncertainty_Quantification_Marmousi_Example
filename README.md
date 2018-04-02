@@ -24,3 +24,5 @@ The invertedModel folder contains the inverted models, used for posterior sampli
 Note that the Misfit functions in SRVM_part1 were obtained 6 months ago.
 
 For the newest comparion of data misfit functions, please find data_misfit.png within this folder.
+
+Please take data_misfit_old.png for reference.
