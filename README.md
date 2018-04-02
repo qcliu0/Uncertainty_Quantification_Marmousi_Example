@@ -15,7 +15,7 @@ Others: supporting subfunctions
 
 The SRVM scalars a_* and nu_*, and vectors w_* can be collected from the ./scratch/optimize folder under the numerical example.
 
-Actually, only one scalar $ nu/a $ is enough, which will occur in the official version soon.
+Actually, only one scalar variable $ nu/a $ suffices, which will occur in the official version soon.
 
 The initModel folder contains the init models, used for prior samplings.
 
