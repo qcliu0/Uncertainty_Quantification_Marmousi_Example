@@ -4,7 +4,7 @@ Hflag = 0;
 
 %Sigma1 = Sigma * Sigma + Sigma * 2 +  0*diag(ones(99,1));
 
-Sigma1 = Sigma + 0.001*diag(ones(nlowrk,1));
+Sigma1 = Sigma + 0.0001*diag(ones(nlowrk,1));
 if Hflag == 1
     Sigma1 = inv(Sigma1);
 end
@@ -40,12 +40,16 @@ for i = 1:nsize
     T_out(i,1) = dot(T_U(i,1:nlowrk),U(i,1:nlowrk));
     if Hflag == 1
         %T_out(i,1) = dot(T_U(i,1:nlowrk),U(i,1:nlowrk));
-        T_out(i,1) = dot(T_U(np1,1:nlowrk),U(i,1:nlowrk));
+        T_out(i,1) = dot(T_U(i,1:nlowrk),U(i,1:nlowrk));
     end
 end
+
+
+
 tmpout = single(sqrt(T_out));
+
 if Hflag == 1
-     %tmpout = single(sqrt(T_out));
+     tmpout = single(sqrt(T_out));
      %tmpout = sqrt(tmpout);
      %tmpout = single((T_out));     
 end
@@ -53,6 +57,7 @@ end
 if Hflag == 1
     for i = 29*25*90:30*25*90
         tmpout(i,1) = tmpout(i,1)*0.001;
+        tmpout(i+67500,1) = tmpout(i+67500,1)*0.001;
     end
 end
 
@@ -65,7 +70,7 @@ for i = 1:nsize
 end
 
 nsz = size(tmpout,1);
-% nsz = nsz * 0.5;
+nsz = nsz * 0.5;
 
 nx = 90*4+1;
 nz = 30*4+1;
@@ -75,6 +80,8 @@ xx1 = zeros(nx,nz);
 GLLX = tmpout(1:nsz);
 xx = GLL2REGU(GLLX);
 
+GLLX = tmpout(nsz+1:end);
+xx1 = GLL2REGU(GLLX);
 
 s = 'sampling';
 
