@@ -1,5 +1,11 @@
 # Uncertainty_analysis_example-Marmousi-
 
+======update@Nov 8, 2018. 
+
+For 3D cases, although a bit time-consuming, our codes work well with arrays at the size of 18 million elements.
+
+==========================
+
 Workflow for SRVM based uncertainty estimation
 1. Run RSVD_SRVM.m to get the SVD of inverse Hessian
 2. Run sampling_Hess to extract elements from Hessian or inverse Hessian
