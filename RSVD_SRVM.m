@@ -30,8 +30,6 @@ for ir = 1:nr
         fp = fopen(s1,'r');
         w = fread(fp,'double');
 
-    %     sz = size(wn)
-    %     sz = size(sampler)
         wn = w(11:end);
         xtemp = dot(wn,sampler(:,ir));
         xtemp = xtemp*nu/a;
@@ -57,7 +55,6 @@ for ir = 1:nr
         fp = fopen(s1,'r');
         w = fread(fp,'double');
 
-
         wn = w(11:end);
         xtemp = dot(wn,sampler(:,ir));
         xtemp = xtemp*nu/a;
@@ -72,15 +69,12 @@ end
 sampler = sampler - R;
 
 k=nr;
-% sampler1=sampler-R;
+
 [Q,~] = qr(sampler,0);
 Zt = R' * Q;
 Wt = sampler' * Q;
 B = linsolve(Zt,Wt);
 Bt = 0.5 * (B + B');
-% [Uhat,Sigma] = eig(Bt);
-% Uhat = Uhat(:,end:-1:(end-k+1));
-% Sigma = Sigma(end:-1:(end-k+1),end:-1:(end-k+1));
 
 [Uhat,Sigma,~] = svd(Bt);
 
