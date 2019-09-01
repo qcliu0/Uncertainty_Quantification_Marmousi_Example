@@ -1,4 +1,4 @@
-Visualization for Posterior Sampling.
+Visualization for Posterior Sampling (credited to Daniel Peter).
 
 1. The a.out in the files of the main folder is produced by pre_plot.c with
 
